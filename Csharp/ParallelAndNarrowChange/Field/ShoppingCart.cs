@@ -7,8 +7,6 @@ namespace ParallelAndNarrowChange.Field {
         // Data clump
         readonly List<int> prices = new();
 
-        int numberOfItems;
-
         public decimal CalculateTotalPrice() {
             return prices.Sum();
         }
@@ -20,7 +18,6 @@ namespace ParallelAndNarrowChange.Field {
         public void Add(int aPrice) {
             // Primitive obsession
             prices.Add(aPrice);
-            numberOfItems++;
         }
 
         public int NumberOfProducts() {
