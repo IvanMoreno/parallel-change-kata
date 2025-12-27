@@ -5,7 +5,7 @@ using ParallelAndNarrowChange.Field;
 namespace ParallelAndNarrowChange{
     [TestFixture]
     public class ShoppingCartShould{
-        private ShoppingCart cart;
+        ShoppingCart cart;
 
         [SetUp]
         public void SetUp(){
