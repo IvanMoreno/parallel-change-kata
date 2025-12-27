@@ -33,6 +33,11 @@ namespace ParallelAndNarrowChange {
         }
 
         [Test]
+        public void number_of_products_is_zero_with_empty_cart() {
+            cart.NumberOfProducts().Should().Be(0);
+        }
+
+        [Test]
         public void knows_the_number_of_items_with_just_one() {
             cart.Add(10);
 
