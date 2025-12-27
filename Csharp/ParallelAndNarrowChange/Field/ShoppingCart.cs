@@ -4,7 +4,6 @@ using System.Linq;
 namespace ParallelAndNarrowChange.Field {
     // Divergent change (keep track of products and calculate discounts)
     public class ShoppingCart {
-        // Data clump
         readonly List<int> prices = new();
 
         public decimal CalculateTotalPrice() {
