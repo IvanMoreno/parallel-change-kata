@@ -1,7 +1,9 @@
 ﻿namespace ParallelAndNarrowChange.Field
 {
+    // Divergent change (keep track of products and calculate discounts)
     public class ShoppingCart{
-        private decimal price;
+        // Data clump
+        decimal price; // Primitive obsession
         int numberOfItems;
 
         public decimal CalculateTotalPrice(){
@@ -9,10 +11,10 @@
         }
 
         public bool HasDiscount(){
-            return price > 100;
+            return price > 100; // Magic number
         }
 
-        public void Add(int aPrice){
+        public void Add(int aPrice){ // Primitive obsession
             this.price = aPrice;
             numberOfItems++;
         }
