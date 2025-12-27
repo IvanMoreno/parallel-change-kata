@@ -5,6 +5,7 @@ namespace ParallelAndNarrowChange.Field {
     public class ShoppingCart {
         // Data clump
         decimal price;
+        readonly List<int> prices = new();
 
         public decimal Price {
             get => price;
@@ -24,6 +25,7 @@ namespace ParallelAndNarrowChange.Field {
         public void Add(int aPrice) {
             // Primitive obsession
             this.Price += aPrice;
+            prices.Add(aPrice);
             numberOfItems++;
         }
 
