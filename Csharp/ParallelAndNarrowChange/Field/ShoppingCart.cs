@@ -4,6 +4,8 @@ using System.Linq;
 namespace ParallelAndNarrowChange.Field {
     // Divergent change (keep track of products and calculate discounts)
     public class ShoppingCart {
+        const decimal ItemPriceThresholdForDiscount = 100;
+        
         readonly List<int> prices = new();
 
         public decimal CalculateTotalPrice() {
@@ -11,7 +13,7 @@ namespace ParallelAndNarrowChange.Field {
         }
 
         public bool HasDiscount() {
-            return CalculateTotalPrice() > 100; // Magic number
+            return CalculateTotalPrice() > ItemPriceThresholdForDiscount;
         }
 
         public void Add(int aPrice) {
