@@ -14,7 +14,7 @@ namespace ParallelAndNarrowChange.Field {
         }
 
         public bool HasDiscount() {
-            return (decimal)prices.Sum() > 100; // Magic number
+            return CalculateTotalPrice() > 100; // Magic number
         }
 
         public void Add(int aPrice) {
