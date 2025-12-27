@@ -59,6 +59,16 @@ namespace ParallelAndNarrowChange {
             cart.HasDiscount().Should().BeTrue();
         }
 
+        [Test]
+        // Taking a risky decision here, based only on an assumption by reading the test above.
+        // Would validate this with product instead, if possible. 
+        public void does_not_offer_discount_if_bought_multiple_cheap_products() {
+            cart.Add(60);
+            cart.Add(60);
+            
+            cart.HasDiscount().Should().BeFalse();
+        }
+
         [TestCase(10)]
         [TestCase(100)]
         public void does_not_offer_discount_for_cheap_products(int aPrice) {

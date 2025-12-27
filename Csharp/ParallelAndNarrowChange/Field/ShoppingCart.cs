@@ -13,7 +13,7 @@ namespace ParallelAndNarrowChange.Field {
         }
 
         public bool HasDiscount() {
-            return CalculateTotalPrice() > ItemPriceThresholdForDiscount;
+            return prices.Any(price => price > ItemPriceThresholdForDiscount);
         }
 
         public void Add(int aPrice) {
