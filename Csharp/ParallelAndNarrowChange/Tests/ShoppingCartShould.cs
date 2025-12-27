@@ -20,10 +20,18 @@ namespace ParallelAndNarrowChange{
         }
 
         [Test]
-        public void knows_the_number_of_items(){
+        public void knows_the_number_of_items_with_just_one(){
             cart.Add(10);
 
             cart.NumberOfProducts().Should().Be(1);
+        }
+
+        [Test]
+        public void knows_the_number_of_two_items() {
+            cart.Add(10);
+            cart.Add(10);
+            
+            cart.NumberOfProducts().Should().Be(2);
         }
 
         [Test]

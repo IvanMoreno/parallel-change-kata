@@ -2,6 +2,7 @@
 {
     public class ShoppingCart{
         private decimal price;
+        int numberOfItems;
 
         public decimal CalculateTotalPrice(){
             return price;
@@ -13,10 +14,11 @@
 
         public void Add(int aPrice){
             this.price = aPrice;
+            numberOfItems++;
         }
 
         public int NumberOfProducts(){
-            return 1;
+            return numberOfItems;
         }
     }
 }
