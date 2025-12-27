@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace ParallelAndNarrowChange.Field {
     // Divergent change (keep track of products and calculate discounts)
@@ -8,7 +9,7 @@ namespace ParallelAndNarrowChange.Field {
         readonly List<int> prices = new();
 
         public decimal Price {
-            get => price;
+            get => prices.Sum();
             private set => price = value;
         }
 
