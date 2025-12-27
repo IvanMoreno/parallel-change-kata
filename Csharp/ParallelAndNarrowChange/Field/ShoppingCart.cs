@@ -5,12 +5,11 @@ namespace ParallelAndNarrowChange.Field {
     // Divergent change (keep track of products and calculate discounts)
     public class ShoppingCart {
         // Data clump
-        decimal price;
         readonly List<int> prices = new();
 
         public decimal Price {
             get => prices.Sum();
-            private set => price = value;
+            private set { }
         }
 
         int numberOfItems;
