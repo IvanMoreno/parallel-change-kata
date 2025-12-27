@@ -13,6 +13,12 @@ namespace ParallelAndNarrowChange{
         }
 
         [Test]
+        public void final_price_is_zero_with_empty_cart()
+        {
+            cart.CalculateTotalPrice().Should().Be(0);
+        }
+
+        [Test]
         public void calculate_the_final_price_with_one_item(){
             cart.Add(10);
 
