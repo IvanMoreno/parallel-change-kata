@@ -7,16 +7,14 @@ namespace ParallelAndNarrowChange.Field {
         // Data clump
         readonly List<int> prices = new();
 
-        public decimal Price => prices.Sum();
-
         int numberOfItems;
 
         public decimal CalculateTotalPrice() {
-            return Price;
+            return prices.Sum();
         }
 
         public bool HasDiscount() {
-            return Price > 100; // Magic number
+            return (decimal)prices.Sum() > 100; // Magic number
         }
 
         public void Add(int aPrice) {
