@@ -33,9 +33,10 @@ namespace ParallelAndNarrowChange{
             cart.HasDiscount().Should().BeTrue();
         }
 
-        [Test]
-        public void does_not_offer_discount_for_cheap_products(){
-            cart.Add(10);
+        [TestCase(10)]
+        [TestCase(100)]
+        public void does_not_offer_discount_for_cheap_products(int aPrice){
+            cart.Add(aPrice);
 
             cart.HasDiscount().Should().BeFalse();
         }
