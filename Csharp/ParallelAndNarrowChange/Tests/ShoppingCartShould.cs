@@ -13,10 +13,19 @@ namespace ParallelAndNarrowChange{
         }
 
         [Test]
-        public void calculate_the_final_price(){
+        public void calculate_the_final_price_with_one_item(){
             cart.Add(10);
 
             cart.CalculateTotalPrice().Should().Be(10);
+        }
+
+        [Test]
+        public void calculate_the_final_price_with_two_items()
+        {
+            cart.Add(10);
+            cart.Add(5);
+            
+            cart.CalculateTotalPrice().Should().Be(10 + 5);
         }
 
         [Test]

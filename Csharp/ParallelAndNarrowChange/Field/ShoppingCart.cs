@@ -15,7 +15,7 @@
         }
 
         public void Add(int aPrice){ // Primitive obsession
-            this.price = aPrice;
+            this.price += aPrice;
             numberOfItems++;
         }
 
